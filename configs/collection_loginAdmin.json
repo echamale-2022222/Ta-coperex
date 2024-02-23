@@ -1,0 +1,28 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "loginAdmin",
+    "dateExported": "2024-02-23T23:29:03.234Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "b6ed632a-54a6-4c7f-a5e6-87b63e5282fa",
+            "colId": "08a7e1db-778c-4683-aad1-9531b8b83a7c",
+            "containerId": "",
+            "name": "post login",
+            "url": "http://localhost:3000/coperex/v1/auth/login",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-02-23T23:26:21.950Z",
+            "modified": "2024-02-23T23:27:20.056Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"mail\": \"echamale@gmail.com\",\n  \"password\": \"123456\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
