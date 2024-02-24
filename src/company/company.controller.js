@@ -75,6 +75,39 @@ export const years = async (req, res) => {
     });
 }
 
+export const category = async (req, res) => {
+    const query = { companyStatus: true };
+    let sortDirection = 1;
+    let filterCategory = {};
+
+    if (req.query.category) {
+        const category = req.query.category;
+
+        filterCategory = { businessCategory: category };
+    }
+
+    if (req.query.order === 'desc') {
+        sortDirection = -1;
+    }
+
+    try {
+        const [quantityCompany, companies] = await Promise.all([
+            Company.countDocuments({ ...query, ...filterCategory }),
+            Company.find({ ...query, ...filterCategory }).sort({ companyName: sortDirection })
+        ]);
+
+        res.status(200).json({
+            msg: "Companies that match",
+            quantityCompany,
+            companies
+        });
+    } catch (error) {
+        console.error('Error filtering companies by category:', error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+}
+
+
 export const updateCompany = async (req, res = response) => {
     const { id } = req.params;
     const {_id, companyName, companyStatus, ...rest} = req.body;
@@ -120,4 +153,5 @@ export const excelCompanies = async(req, res) => {
         res.status(500).json({ error: 'Internal Server Error' });
     }
 }
+
 

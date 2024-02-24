@@ -1,0 +1,189 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "company",
+    "dateExported": "2024-02-24T05:47:44.816Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "8fc920f7-f08e-46d0-bc03-3080f64144db",
+            "colId": "26fe95d7-b8e8-40b0-8a26-c7291cf40618",
+            "containerId": "",
+            "name": "post addCompany",
+            "url": "http://localhost:3000/coperex/v1/company",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-02-24T04:40:44.055Z",
+            "modified": "2024-02-24T05:44:56.579Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWQ5MjIyYThlMGYyMjk1ZDEzZGE4Y2MiLCJpYXQiOjE3MDg3NTM0ODcsImV4cCI6MTcwODc1NzA4N30.JA8P9KhPx1h-m-Lp6ajRiII1n0tlWE17UbDhPzFFiZM"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"companyName\": \"Solutions\",\n  \"impactLevel\": \"Medio\",\n  \"yearsOfExperience\": 8,\n  \"businessCategory\": \"Transporte\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "d50abf82-054f-4099-8d08-1752cc2dc3d4",
+            "colId": "26fe95d7-b8e8-40b0-8a26-c7291cf40618",
+            "containerId": "",
+            "name": "get companies",
+            "url": "http://localhost:3000/coperex/v1/company/companies",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-02-24T04:53:56.482Z",
+            "modified": "2024-02-24T05:45:08.804Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWQ5MjIyYThlMGYyMjk1ZDEzZGE4Y2MiLCJpYXQiOjE3MDg3NTM0ODcsImV4cCI6MTcwODc1NzA4N30.JA8P9KhPx1h-m-Lp6ajRiII1n0tlWE17UbDhPzFFiZM"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "75c61db3-0c0a-4578-9829-65e705e4e097",
+            "colId": "26fe95d7-b8e8-40b0-8a26-c7291cf40618",
+            "containerId": "",
+            "name": "get category",
+            "url": "http://localhost:3000/coperex/v1/company/filterCategory?category=Transporte",
+            "method": "GET",
+            "sortNum": 22500,
+            "created": "2024-02-24T05:35:03.183Z",
+            "modified": "2024-02-24T05:45:24.384Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWQ5MjIyYThlMGYyMjk1ZDEzZGE4Y2MiLCJpYXQiOjE3MDg3NTM0ODcsImV4cCI6MTcwODc1NzA4N30.JA8P9KhPx1h-m-Lp6ajRiII1n0tlWE17UbDhPzFFiZM"
+                }
+            ],
+            "params": [
+                {
+                    "name": "category",
+                    "value": "Transporte",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "c1c64dcb-9386-4c99-b344-fc5947dff664",
+            "colId": "26fe95d7-b8e8-40b0-8a26-c7291cf40618",
+            "containerId": "",
+            "name": "get companiesExcel",
+            "url": "http://localhost:3000/coperex/v1/company/excel",
+            "method": "GET",
+            "sortNum": 25000,
+            "created": "2024-02-24T05:23:49.953Z",
+            "modified": "2024-02-24T05:45:34.445Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWQ5MjIyYThlMGYyMjk1ZDEzZGE4Y2MiLCJpYXQiOjE3MDg3NTM0ODcsImV4cCI6MTcwODc1NzA4N30.JA8P9KhPx1h-m-Lp6ajRiII1n0tlWE17UbDhPzFFiZM"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "4b7a89d2-5e88-4511-8b68-e0725b918773",
+            "colId": "26fe95d7-b8e8-40b0-8a26-c7291cf40618",
+            "containerId": "",
+            "name": "get companiesA-Z",
+            "url": "http://localhost:3000/coperex/v1/company/orderCompanies",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-02-24T04:59:21.314Z",
+            "modified": "2024-02-24T05:46:31.950Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWQ5MjIyYThlMGYyMjk1ZDEzZGE4Y2MiLCJpYXQiOjE3MDg3NTM0ODcsImV4cCI6MTcwODc1NzA4N30.JA8P9KhPx1h-m-Lp6ajRiII1n0tlWE17UbDhPzFFiZM"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "1706cb91-1846-4396-adbe-1149773ef05c",
+            "colId": "26fe95d7-b8e8-40b0-8a26-c7291cf40618",
+            "containerId": "",
+            "name": "get yearsOfExperience",
+            "url": "http://localhost:3000/coperex/v1/company/yearsExperience?years=50",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-02-24T05:08:45.778Z",
+            "modified": "2024-02-24T05:46:59.947Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWQ5MjIyYThlMGYyMjk1ZDEzZGE4Y2MiLCJpYXQiOjE3MDg3NTM0ODcsImV4cCI6MTcwODc1NzA4N30.JA8P9KhPx1h-m-Lp6ajRiII1n0tlWE17UbDhPzFFiZM"
+                }
+            ],
+            "params": [
+                {
+                    "name": "years",
+                    "value": "50",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "6fc4f4ba-ab1d-4b49-b096-7f4b02c404b4",
+            "colId": "26fe95d7-b8e8-40b0-8a26-c7291cf40618",
+            "containerId": "",
+            "name": "get companiesZ-A",
+            "url": "http://localhost:3000/coperex/v1/company/orderCompanies?order=desc",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-02-24T05:05:19.571Z",
+            "modified": "2024-02-24T05:46:47.120Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWQ5MjIyYThlMGYyMjk1ZDEzZGE4Y2MiLCJpYXQiOjE3MDg3NTM0ODcsImV4cCI6MTcwODc1NzA4N30.JA8P9KhPx1h-m-Lp6ajRiII1n0tlWE17UbDhPzFFiZM"
+                }
+            ],
+            "params": [
+                {
+                    "name": "order",
+                    "value": "desc",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "ade39161-65a8-4f9d-b53f-2d78e68aaca0",
+            "colId": "26fe95d7-b8e8-40b0-8a26-c7291cf40618",
+            "containerId": "",
+            "name": "put updateCompany",
+            "url": "http://localhost:3000/coperex/v1/company/65d97489174943f281652a4a",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-02-24T05:18:56.291Z",
+            "modified": "2024-02-24T05:47:21.912Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWQ5MjIyYThlMGYyMjk1ZDEzZGE4Y2MiLCJpYXQiOjE3MDg3NTM0ODcsImV4cCI6MTcwODc1NzA4N30.JA8P9KhPx1h-m-Lp6ajRiII1n0tlWE17UbDhPzFFiZM"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n \"impactLevel\": \"Medio\",\n \"yearsOfExperience\": 12,\n \"businessCategory\": \"Electronica\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
