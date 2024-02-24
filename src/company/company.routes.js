@@ -41,7 +41,7 @@ router.put(
     "/:id",
     [
         validateJWT,
-        check("id", "It is not a valid id").isMongoId(),
+        check("id", "It is not a valid id ").isMongoId(),
         validateFields   
     ], updateCompany)
 
