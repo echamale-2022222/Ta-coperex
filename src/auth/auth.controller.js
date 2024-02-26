@@ -6,7 +6,7 @@ export const login = async (req, res) => {
     const { correo, password } = req.body;
 
     try {
-        const usuario = await Admin.findOne({ correo });
+        const usuario = await Admin.findOne({ mail });
     
         if (!usuario) {
           return res.status(400).json({
