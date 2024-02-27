@@ -5,6 +5,10 @@ const PartnerSchema = mongoose.Schema({
         type: String,
         required: [true, "The partner's name is required"]
     },
+    companyName:{
+        type: String,
+        required: [true, "Compa name is required"]
+    },
     activitySector:{
         type: String,
         required: [true, "Sector activity is mandatory"]

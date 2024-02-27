@@ -11,6 +11,7 @@ router.post(
     [
         validateJWT,
         check("partnerName", "The partner name cannot be empty").not().isEmpty(),
+        check("partnerName", "The company name cannot be empty").not().isEmpty(),
         check("activitySector", "The activity of the sector cannot be empty").not().isEmpty(),
         check("companyImpactLevel", "The company impact level cannot be empty").not().isEmpty(),
         check("yearsOfCompanyExperience", "The years of experience of the company are mandatory").not().isEmpty(),

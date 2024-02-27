@@ -2,8 +2,8 @@ import { request } from "express";
 import Partner from "./partner.model.js";
 
 export const partnerPost = async (req, res) => {
-    const { partnerName, activitySector, companyImpactLevel, yearsOfCompanyExperience, businessCategoryOfTheCompany } = req.body;
-    const partner = new Partner({ partnerName, activitySector, companyImpactLevel, yearsOfCompanyExperience, businessCategoryOfTheCompany });
+    const { partnerName, companyName, activitySector, companyImpactLevel, yearsOfCompanyExperience, businessCategoryOfTheCompany } = req.body;
+    const partner = new Partner({ partnerName, companyName, activitySector, companyImpactLevel, yearsOfCompanyExperience, businessCategoryOfTheCompany });
 
     await partner.save();
 
@@ -38,7 +38,7 @@ export const partnersAZ_ZA = async (req, res) => {
 
     const [quantityPartner, partners] = await Promise.all([
         Partner.countDocuments(query),
-        Partner.find(query).sort({ partnerName: sortDirection})
+        Partner.find(query).sort({ companyName: sortDirection})
     ])
 
     res.status(200).json({
@@ -64,7 +64,7 @@ export const years = async (req, res) => {
 
     const [quantityPartner, partners] = await Promise.all([
         Partner.countDocuments({...query, ...filterYears}),
-        Partner.find({...query, ...filterYears}).sort({ partnerName: sortDirection})
+        Partner.find({...query, ...filterYears}).sort({ companyName: sortDirection})
     ]);
 
     res.status(200).json({
@@ -76,7 +76,7 @@ export const years = async (req, res) => {
 
 export const updatePartner = async (req, res = response) => {
     const { id } = req.params;
-    const {_id, partnerName, state, ...rest} = req.body;
+    const {_id, partnerName, companyName, state, ...rest} = req.body;
 
     await Partner.findByIdAndUpdate(id, rest);
 
