@@ -13,3 +13,17 @@ export const partnerPost = async (req, res) => {
     });
 }
 
+export const registeredPartners = async (req, res) => {
+    const query = { state: true };
+
+    const [quantityPartner, partners] = await Promise.all([
+        Partner.countDocuments(query),
+        Partner.find(query)
+    ]);
+
+    res.status(200).json({
+        msg: "Registered partners",
+        quantityPartner,
+        partners
+    });
+}

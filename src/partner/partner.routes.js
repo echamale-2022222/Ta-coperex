@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { check } from "express-validator";
-import { partnerPost } from "./partner.controller.js";
+import { partnerPost, registeredPartners } from "./partner.controller.js";
 import { validateFields } from "../middlewares/validate-fields.js";
 import { validateJWT } from "../middlewares/validate-jwt.js";
 
@@ -17,5 +17,10 @@ router.post(
         check("businessCategoryOfTheCompany", "The company's business category cannot be empty").not().isEmpty(),
         validateFields,
     ], partnerPost);
+
+router.get(
+    "/", 
+    validateJWT, 
+    registeredPartners);
 
 export default router;
