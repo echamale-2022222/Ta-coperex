@@ -1,5 +1,6 @@
 import { request } from "express";
 import Partner from "./partner.model.js";
+import Excel from 'exceljs'
 
 export const partnerPost = async (req, res) => {
     const { partnerName, companyName, activitySector, companyImpactLevel, yearsOfCompanyExperience, businessCategoryOfTheCompany } = req.body;
@@ -86,4 +87,38 @@ export const updatePartner = async (req, res = response) => {
         msg: 'Updated partner',
         partner
     });
+}
+
+export const excelPartners = async(req, res) => {
+    const query = { state: true };
+
+    try {
+        const partners = await Partner.find(query);
+
+        const workbook = new Excel.Workbook();
+        const worksheet = workbook.addWorksheet('Partners');
+
+        worksheet.addRow(['Nombre del socio', 'Nombre de la empresa', 'Sector de actividad', 'Nivel de impacto de la empresa', 'Años de experiencia', 'Categoria empresarial de la empresa']);
+
+        partners.forEach(partner => {
+            worksheet.addRow([
+                partner.partnerName,
+                partner.companyName,
+                partner.activitySector,
+                partner.companyImpactLevel,
+                partner.yearsOfCompanyExperience,
+                partner.businessCategoryOfTheCompany
+            ]);
+        });
+
+        const buffer = await workbook.xlsx.writeBuffer();
+
+        res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+        res.setHeader('Content-Disposition', 'attachment; filename="partners.xlsx"');
+
+        res.status(200).send(buffer);
+    } catch (error) {
+        console.error('Error when exporting partners to Excel:', error);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
 }
