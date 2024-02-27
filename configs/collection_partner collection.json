@@ -1,0 +1,164 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "partner collection",
+    "dateExported": "2024-02-27T19:26:34.746Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "199718a3-80a5-417f-a8ed-7b97d98b1b31",
+            "colId": "909663df-53c0-46f2-bab7-ae713f3dcd18",
+            "containerId": "",
+            "name": "post partner",
+            "url": "http://localhost:3000/coperex/v1/partner",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-02-27T17:00:38.767Z",
+            "modified": "2024-02-27T18:58:09.923Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWRlMWI4YzA5NmE4NGI2YzYwZGQxZmUiLCJpYXQiOjE3MDkwNTk3NjUsImV4cCI6MTcwOTA2MzM2NX0.aOPHz-KG9Z8NtHI_OM1eKkSEowCyq8hq_FhjsGS-eVA"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"partnerName\": \"Auan Manuel Casas\",\n  \"companyName\": \"4ISTECH \",\n  \"activitySector\": \"Tecnologia\",\n  \"companyImpactLevel\": \"Alto\",\n  \"yearsOfCompanyExperience\": 10,\n  \"businessCategoryOfTheCompany\": \"Desarrollo de software\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "e6c4a31c-fcf4-4185-b334-201e2a1e8d83",
+            "colId": "909663df-53c0-46f2-bab7-ae713f3dcd18",
+            "containerId": "",
+            "name": "get partners",
+            "url": "http://localhost:3000/coperex/v1/partner",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-02-27T17:45:12.011Z",
+            "modified": "2024-02-27T18:58:22.613Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWRlMWI4YzA5NmE4NGI2YzYwZGQxZmUiLCJpYXQiOjE3MDkwNTk3NjUsImV4cCI6MTcwOTA2MzM2NX0.aOPHz-KG9Z8NtHI_OM1eKkSEowCyq8hq_FhjsGS-eVA"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "dbc7c31b-8e8e-48b7-807a-d0e4929a942a",
+            "colId": "909663df-53c0-46f2-bab7-ae713f3dcd18",
+            "containerId": "",
+            "name": "get partnersA-Z",
+            "url": "http://localhost:3000/coperex/v1/partner/orderPartners",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-02-27T17:56:25.758Z",
+            "modified": "2024-02-27T18:58:34.857Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWRlMWI4YzA5NmE4NGI2YzYwZGQxZmUiLCJpYXQiOjE3MDkwNTk3NjUsImV4cCI6MTcwOTA2MzM2NX0.aOPHz-KG9Z8NtHI_OM1eKkSEowCyq8hq_FhjsGS-eVA"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "aebe9f3c-ecb7-4d0f-aa1e-9a886f5b498e",
+            "colId": "909663df-53c0-46f2-bab7-ae713f3dcd18",
+            "containerId": "",
+            "name": "get partnersZ-A",
+            "url": "http://localhost:3000/coperex/v1/partner/orderPartners?order=desc",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-02-27T17:57:09.746Z",
+            "modified": "2024-02-27T18:58:41.080Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWRlMWI4YzA5NmE4NGI2YzYwZGQxZmUiLCJpYXQiOjE3MDkwNTk3NjUsImV4cCI6MTcwOTA2MzM2NX0.aOPHz-KG9Z8NtHI_OM1eKkSEowCyq8hq_FhjsGS-eVA"
+                }
+            ],
+            "params": [
+                {
+                    "name": "order",
+                    "value": "desc",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "2cde9372-3ceb-4350-a927-6e4ab647e99f",
+            "colId": "909663df-53c0-46f2-bab7-ae713f3dcd18",
+            "containerId": "",
+            "name": "get partnersYears",
+            "url": "http://localhost:3000/coperex/v1/partner/year?years=15",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-02-27T18:16:04.264Z",
+            "modified": "2024-02-27T18:52:09.387Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWRlMWI4YzA5NmE4NGI2YzYwZGQxZmUiLCJpYXQiOjE3MDkwNTk3NjUsImV4cCI6MTcwOTA2MzM2NX0.aOPHz-KG9Z8NtHI_OM1eKkSEowCyq8hq_FhjsGS-eVA"
+                }
+            ],
+            "params": [
+                {
+                    "name": "years",
+                    "value": "15",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "283c1b91-66b4-476f-a6dd-e0717efdfe01",
+            "colId": "909663df-53c0-46f2-bab7-ae713f3dcd18",
+            "containerId": "",
+            "name": "put updatePartner",
+            "url": "http://localhost:3000/coperex/v1/partner/65de2268d23fc181dc3e3c3f",
+            "method": "PUT",
+            "sortNum": 60000,
+            "created": "2024-02-27T18:47:39.832Z",
+            "modified": "2024-02-27T18:50:48.937Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWRlMWI4YzA5NmE4NGI2YzYwZGQxZmUiLCJpYXQiOjE3MDkwNTk3NjUsImV4cCI6MTcwOTA2MzM2NX0.aOPHz-KG9Z8NtHI_OM1eKkSEowCyq8hq_FhjsGS-eVA"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"activitySector\": \"Tecnologia\",\n  \"companyImpactLevel\": \"Alto\",\n  \"yearsOfCompanyExperience\": 15,\n  \"businessCategoryOfTheCompany\": \"Desarrollo de software\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "a9e46290-94f2-4b0e-8df1-f326f4f34aaf",
+            "colId": "909663df-53c0-46f2-bab7-ae713f3dcd18",
+            "containerId": "",
+            "name": "get partnersExcel",
+            "url": "http://localhost:3000/coperex/v1/partner/excelPartner",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2024-02-27T19:17:35.309Z",
+            "modified": "2024-02-27T19:18:30.635Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWRlMWI4YzA5NmE4NGI2YzYwZGQxZmUiLCJpYXQiOjE3MDkwNTk3NjUsImV4cCI6MTcwOTA2MzM2NX0.aOPHz-KG9Z8NtHI_OM1eKkSEowCyq8hq_FhjsGS-eVA"
+                }
+            ],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
