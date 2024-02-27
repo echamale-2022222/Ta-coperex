@@ -73,3 +73,17 @@ export const years = async (req, res) => {
         partners
     });
 }
+
+export const updatePartner = async (req, res = response) => {
+    const { id } = req.params;
+    const {_id, partnerName, state, ...rest} = req.body;
+
+    await Partner.findByIdAndUpdate(id, rest);
+
+    const partner = await Partner.findOne({_id: id});
+
+    res.status(200).json({
+        msg: 'Updated partner',
+        partner
+    });
+}

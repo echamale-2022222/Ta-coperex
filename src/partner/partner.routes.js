@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { check } from "express-validator";
-import { partnerPost, partnersAZ_ZA, registeredPartners, years } from "./partner.controller.js";
+import { partnerPost, partnersAZ_ZA, registeredPartners, updatePartner, years } from "./partner.controller.js";
 import { validateFields } from "../middlewares/validate-fields.js";
 import { validateJWT } from "../middlewares/validate-jwt.js";
 
@@ -32,5 +32,12 @@ router.get(
     "/year",
     validateJWT,
     years)
-    
+
+router.put(
+    "/:id",
+    validateJWT,
+    check("id", "It is not a valid id").isMongoId(),
+    validateFields,
+    updatePartner)
+
 export default router;
