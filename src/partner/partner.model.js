@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const PartnerSchema = mongoose.Schema({
-    name:{
+    partnerName:{
         type: String,
         required: [true, "The partner's name is required"]
     },

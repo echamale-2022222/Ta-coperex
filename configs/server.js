@@ -7,6 +7,7 @@ import { dbConnection } from './mongo.js'
 import adminRoutes from '../src/admin/admin.routes.js'
 import authRoutes from '../src/auth/auth.routes.js'
 import companyRoutes from '../src/company/company.routes.js'
+import partnerRoutes from '../src/partner/partner.routes.js'
 
 class Server{
     constructor(){
@@ -15,6 +16,7 @@ class Server{
         this.adminPath = '/coperex/v1/admin';
         this.authPath = '/coperex/v1/auth';
         this.companyPath = '/coperex/v1/company';
+        this.partnerPath = '/coperex/v1/partner';
 
         this.middlewares();
         this.connectDB();
@@ -37,6 +39,7 @@ class Server{
         this.app.use(this.authPath, authRoutes);
         this.app.use(this.adminPath, adminRoutes);
         this.app.use(this.companyPath, companyRoutes);
+        this.app.use(this.partnerPath, partnerRoutes);
     }
 
     listen(){
