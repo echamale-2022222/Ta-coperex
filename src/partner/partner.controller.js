@@ -48,4 +48,28 @@ export const partnersAZ_ZA = async (req, res) => {
     });
 }
 
+export const years = async (req, res) => {
+    const query = { state: true };
+    let sortDirection = 1;
+    let filterYears = {};
 
+    if (req.query.years) {
+        const years = parseInt(req.query.years);
+        filterYears = { yearsOfCompanyExperience: years};
+    }
+
+    if (req.query.order === 'desc') {
+        sortDirection = -1;
+    }
+
+    const [quantityPartner, partners] = await Promise.all([
+        Partner.countDocuments({...query, ...filterYears}),
+        Partner.find({...query, ...filterYears}).sort({ partnerName: sortDirection})
+    ]);
+
+    res.status(200).json({
+        msg: "Partners that match",
+        quantityPartner,
+        partners
+    });
+}

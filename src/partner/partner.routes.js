@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { check } from "express-validator";
-import { partnerPost, partnersAZ_ZA, registeredPartners } from "./partner.controller.js";
+import { partnerPost, partnersAZ_ZA, registeredPartners, years } from "./partner.controller.js";
 import { validateFields } from "../middlewares/validate-fields.js";
 import { validateJWT } from "../middlewares/validate-jwt.js";
 
@@ -28,4 +28,9 @@ router.get(
     validateJWT,
     partnersAZ_ZA)
 
+router.get(
+    "/year",
+    validateJWT,
+    years)
+    
 export default router;
